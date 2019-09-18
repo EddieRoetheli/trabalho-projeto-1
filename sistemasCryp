@@ -1,0 +1,10 @@
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        Pattern padrao= Pattern.compile("^[a-zA-z]{3}[-| ][0-9]{4}$");
+        Matcher pesquisa= padrao.matcher(jTplaca.getText());
+        jTplaca.setText(null);
+        if (pesquisa.matches()){
+            JOptionPane.showMessageDialog(null, "A placa corresponde ao padrão correto!");
+        } else {
+            JOptionPane.showMessageDialog(null, "A placa não corresponde ao padrão correto!");
+        }
+    }       
